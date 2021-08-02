@@ -19,12 +19,6 @@ export default {
   color: #2c3e50;
 }
 .full-height {
-  height: 100vh;
-}
-.half-height {
-  height: 50vh;
-}
-.quarter-height {
-  height: 25vh;
+  min-height: 100vh;
 }
 </style>
