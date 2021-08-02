@@ -17,6 +17,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.full-height {
+  height: 100vh;
+}
+.half-height {
+  height: 50vh;
+}
+.quarter-height {
+  height: 25vh;
 }
 </style>
