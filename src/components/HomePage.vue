@@ -52,11 +52,73 @@
                 </div>
             </div>
         </div>
-        <div id="about-page" class="half-height p-4">
-            <h1>About</h1>
+        <div id="about-page" class="bg-ligth p-3 p-md-5">
+            <div class="row">
+
+                <div class="col-lg">
+                    <!-- Icon made by Freepik perfect from www.flaticon.com -->
+                    <img src="../assets/icons/app.svg" height="120" class="m-4">
+                    <h5 class="ml-md-4 mr-md-4">
+                        Plan your next adventure by setting a daily spending budget.
+                        We make it easy to break your expenses down by category,
+                        giving you more time to plan the important tings!
+                    </h5>
+                </div>
+                <div class="col-lg">
+                    <!-- Icon made by Freepik perfect from www.flaticon.com -->
+                    <img src="../assets/icons/piggy-bank.svg" height="120" class="m-4">
+                    <h5 class="ml-md-4 mr-md-4">
+                        Use the app to track how much money you’ve saved towards your trips
+                        total budgeted goal. Know exactly how much more you need to save,
+                        and how much time you have left to save.
+                    </h5>
+                </div>
+                <div class="col-lg">
+                    <!-- Icon made by Freepik perfect from www.flaticon.com -->
+                    <img src="../assets/icons/passport.svg" height="120" class="m-4">
+                    <h5 class="ml-md-4 mr-md-4">
+                        When the day of your trip comes, have the peace of mind that you
+                        planned out your expenses. Never worry about money on a trip again!
+                    </h5>
+                </div>
+
+            </div>
         </div>
         <div id="contact-page" class="half-height p-4">
-            <h1>Contact</h1>
+
+            <div class="row justify-content-center mt-3 mb-3">
+
+                <div v-if="show_contact == true" class="col-lg-4">
+                    <h2>Have Any Questions?</h2>
+                    <p>Contact us by filling out the information below</p>
+
+                    <div v-if="contact_notice != ''" class="alert alert-warning">
+                        There was a problem submitting your message. {{contact_notice}}
+                    </div>
+
+                    <form @submit.prevent="sendContactMessage()">
+                        <div class="form-group text-left ">
+                        <input v-model="contact_email"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter Your Email"
+                                >
+                        <textarea v-model="contact_message"
+                                    class="form-control mt-3"
+                                    placeholder="Enter Your Message"
+                                    rows="5"
+                        ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <div v-else>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us, we'll get back to you as soon as we can.</p>
+                </div>
+            </div>
+
         </div>
         <div id="footer-page" class="quarter-height p-4">
             <h1>Footer</h1>
@@ -83,6 +145,9 @@ export default {
 #home-banner-left {
     height: 80vh;
     max-height: 80vh;
+}
+#about-page {
+    min-height: 80vh;
 }
 .app_store_img{
     max-height: 80px;
