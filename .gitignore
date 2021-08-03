@@ -5,6 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 src/firebase/credential.js
+functions/mail-credentials.js
 
 # Editor directories and files
 .idea
