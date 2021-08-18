@@ -109,7 +109,7 @@
                                     rows="5"
                         ></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary mt-3">Send Message</button>
                     </form>
                 </div>
 
